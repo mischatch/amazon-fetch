@@ -1,18 +1,25 @@
-var amazon = require('amazon-product-api');
-// import amazon from 'amazon-product-api';
-
-let client = amazon.createClient({
-  awsId: "AKIAIC2FGZKSUKJ3O53Q",
-  awsSecret: "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",
-  awsTag: "amazonfetch-20"
+let webPage = 'https://www.amazon.com/ViQing-Gear-Kinesiology-Building-Athletic/product-reviews/B013TG3SRS/ref=cm_cr_getr_d_paging_btm_2?ie=UTF8&reviewerType=all_reviews&sortBy=recent&pageNumber=1';
+$.get(webPage, (resp,status) => {
+  console.log(resp);
+  debugger
 });
 
-client.itemLookup({
-  idType: 'UPC',
-  itemId: '884392579524'
-}).then(results => {
-debugger
-  console.log(JSON.stringify(results));
-}).catch(err => {
-  console.log(err);
-});
+
+
+
+// let pageRevews = document.getElementsByClassName('a-section review'); // all reviews on page
+//
+//
+//
+// // last page
+// let a = document.getElementsByClassName('a-pagination');
+// let b = Array.from(a);
+// let lastPage = parseInt(b[0].children[6].children[0].text);
+//
+//
+// let i = 1;
+// while(i <= lastPage){
+//   let scrape = webPage + i;
+//
+//   i++;
+// }

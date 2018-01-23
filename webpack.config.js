@@ -1,5 +1,11 @@
 const path = require('path');
-var webpack = require("webpack");
+const webpack = require("webpack");
+const WebpackVertxPlugin = require('webpack-vertx-plugin');
+
+let plugins = [];
+
+// plugins.push(new WebpackVertxPlugin());
+
 
 
 module.exports = {
@@ -10,12 +16,21 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.json$/, loader: 'json-loader' }
+      { test: /\.json$/, loader: 'json-loader' },
+      {test: /\.scss$/, loader: 'style!css!scss?'},
+      {test: /\.html$/, loader: 'html-loader'}
     ],
   },
   resolve: {
-    extensions: ['.webpack.js', '.web.js', '.js']
+    extensions: ['.webpack.js', '.web.js', '.js', '*']
   },
-  target: 'node',
+  target:
+    'node',
+  node: {
+    net: "empty",
+    tls: "empty",
+    fs: "empty"
+  },
+  plugins: plugins,
 
 };

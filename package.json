@@ -10,9 +10,17 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "^3.10.0"
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "webpack": "^3.10.0",
+    "webpack-vertx-plugin": "0.0.5"
   },
   "dependencies": {
-    "amazon-product-api": "^0.4.4"
+    "amazon-product-api": "^0.4.4",
+    "es6-promise": "^4.2.2"
   }
 }
