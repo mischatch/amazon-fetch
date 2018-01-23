@@ -20,7 +20,6 @@
     "webpack-vertx-plugin": "0.0.5"
   },
   "dependencies": {
-    "amazon-product-api": "^0.4.4",
     "es6-promise": "^4.2.2"
   }
 }
